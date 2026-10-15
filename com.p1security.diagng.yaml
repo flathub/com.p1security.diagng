@@ -1,6 +1,6 @@
 app-id: com.p1security.diagng
 runtime: org.gnome.Platform
-runtime-version: "51"
+runtime-version: '51'
 sdk: org.gnome.Sdk
 command: diagng
 sdk-extensions:
@@ -94,24 +94,31 @@ modules:
           type: json
           url: https://api.github.com/repos/P1sec/DiagNG/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.name=="diagmond_tarball_" + $version + "_for_flathub_build.tar.gz") | .browser_download_url
+          url-query: .assets[] | select(.name=="diagmond_tarball_" + $version + "_for_flathub_build.tar.gz")
+            | .browser_download_url
 
   - name: diagng
     buildsystem: simple
     build-commands:
       - mkdir -p /app/bin/
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "." --no-build-isolation
-      - install -Dm644 ./src/diagng/ui/assets/share/icons/hicolor/scalable/apps/com.p1security.diagng.svg -t /app/share/icons/hicolor/scalable/apps/
-      - install -Dm644 ./src/diagng/ui/assets/share/metainfo/com.p1security.diagng.metainfo.xml -t /app/share/metainfo/
-      - install -Dm644 ./src/diagng/ui/assets/share/applications/com.p1security.diagng.desktop -t /app/share/applications/
-      - install -Dm644 ./src/diagng/ui/assets/share/dbus-1/interfaces/com.p1security.diagmetad.xml -t /app/share/dbus-1/interfaces/
-      - install -Dm644 ./src/diagng/ui/assets/share/dbus-1/services/com.p1security.diagmetad.service -t /app/share/dbus-1/services/
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "." --no-build-isolation
+      - install -Dm644 ./src/diagng/ui/assets/share/icons/hicolor/scalable/apps/com.p1security.diagng.svg
+        -t /app/share/icons/hicolor/scalable/apps/
+      - install -Dm644 ./src/diagng/ui/assets/share/metainfo/com.p1security.diagng.metainfo.xml
+        -t /app/share/metainfo/
+      - install -Dm644 ./src/diagng/ui/assets/share/applications/com.p1security.diagng.desktop
+        -t /app/share/applications/
+      - install -Dm644 ./src/diagng/ui/assets/share/dbus-1/interfaces/com.p1security.diagmetad.xml
+        -t /app/share/dbus-1/interfaces/
+      - install -Dm644 ./src/diagng/ui/assets/share/dbus-1/services/com.p1security.diagmetad.service
+        -t /app/share/dbus-1/services/
       - rm -rf diagmond src struct docs *.g* packaging tests *.md *.lock *.yaml LICENSE
     sources:
       - type: git
         url: https://github.com/P1sec/DiagNG
-        tag: 0.1.4.1
-        commit: 492b96fe5b1c9f4eeda2ff46af9e41926fbe6b50
+        tag: 0.1.4.2
+        commit: 573f0d58da050bc660408072636b8cfd69de4eec
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
