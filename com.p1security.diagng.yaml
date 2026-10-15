@@ -110,7 +110,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/P1sec/DiagNG
-        tag: 0.1.4
+        tag: 0.1.4.1
         commit: 492b96fe5b1c9f4eeda2ff46af9e41926fbe6b50
         x-checker-data:
           type: git
