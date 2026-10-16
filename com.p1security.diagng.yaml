@@ -76,7 +76,7 @@ modules:
           type: git
           tag-pattern: ^([\d.]+)$
 
-  - python3-modules.json
+  - python3-modules.yaml
 
   - name: diagmond
     buildsystem: simple
