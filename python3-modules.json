@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2a/51/3dc0cd6498b24dea3cdeaed648568e3ca7454d41334d840b114156d7479f/pyudev-0.24.4-py3-none-any.whl",
-                    "sha256": "b3b6b01c68e6fc628428cc45ff3fe6c277afbb5d96507f14473ddb4a6b959e00",
+                    "url": "https://files.pythonhosted.org/packages/5f/56/0baea14a1c772ce3df2c5d3a57802b31bcdee555f11dc8d18d23a927d14f/pyudev-0.24.5-py3-none-any.whl",
+                    "sha256": "a9c62d04a83472fb05ad5e014ef85933e5cf2fef193caf8b77bb7a9e8ded4812",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "pyudev",
