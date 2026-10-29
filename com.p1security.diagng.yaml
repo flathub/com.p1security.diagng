@@ -88,8 +88,8 @@ modules:
       - cp -r ./share/polkit-1 /app/share/
     sources:
       - type: archive
-        url: https://github.com/P1sec/DiagNG/releases/download/0.1.4/diagmond_tarball_0.1.4_for_flathub_build.tar.gz
-        sha256: 1ce55e6f5c0f89afbcecff46e3b2b44c9a2bbd8d6abf64a7097246cc3adcb0ca
+        url: https://github.com/P1sec/DiagNG/releases/download/0.1.5/diagmond_tarball_0.1.5_for_flathub_build.tar.gz
+        sha256: 537c9e8bd14cba6a71bcfdde255b9d2c7a3e8cfd2ff0749b0d314ff4390682c8
         x-checker-data:
           type: json
           url: https://api.github.com/repos/P1sec/DiagNG/releases/latest
@@ -117,8 +117,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/P1sec/DiagNG
-        tag: 0.1.4.2
-        commit: 573f0d58da050bc660408072636b8cfd69de4eec
+        tag: 0.1.5
+        commit: dc16ee389534349be170231bfda83ba6ef312cb8
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
