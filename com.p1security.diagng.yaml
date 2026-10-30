@@ -88,8 +88,9 @@ modules:
       - cp -r ./share/polkit-1 /app/share/
     sources:
       - type: archive
-        url: https://github.com/P1sec/DiagNG/releases/download/0.1.5/diagmond_tarball_0.1.5_for_flathub_build.tar.gz
-        sha256: 537c9e8bd14cba6a71bcfdde255b9d2c7a3e8cfd2ff0749b0d314ff4390682c8
+        url: 
+          https://github.com/P1sec/DiagNG/releases/download/0.1.6/diagmond_tarball_0.1.6_for_flathub_build.tar.gz
+        sha256: 4e3f8767608e55cf7742356f03d70eaad0e06249c3c328ee8b7198f47f06d3f6
         x-checker-data:
           type: json
           url: https://api.github.com/repos/P1sec/DiagNG/releases/latest
@@ -103,7 +104,8 @@ modules:
       - mkdir -p /app/bin/
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
         --prefix=${FLATPAK_DEST} "." --no-build-isolation
-      - install -Dm644 ./src/diagng/ui/assets/share/icons/hicolor/scalable/apps/com.p1security.diagng.svg
+      - install -Dm644 
+        ./src/diagng/ui/assets/share/icons/hicolor/scalable/apps/com.p1security.diagng.svg
         -t /app/share/icons/hicolor/scalable/apps/
       - install -Dm644 ./src/diagng/ui/assets/share/metainfo/com.p1security.diagng.metainfo.xml
         -t /app/share/metainfo/
@@ -117,8 +119,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/P1sec/DiagNG
-        tag: 0.1.5
-        commit: dc16ee389534349be170231bfda83ba6ef312cb8
+        tag: 0.1.6
+        commit: fe8336f100bc85e26ae0ef14371dbd8454e7b8cf
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
