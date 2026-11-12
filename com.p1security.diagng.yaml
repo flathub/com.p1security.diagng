@@ -89,8 +89,8 @@ modules:
     sources:
       - type: archive
         url: 
-          https://github.com/P1sec/DiagNG/releases/download/0.1.6/diagmond_tarball_0.1.6_for_flathub_build.tar.gz
-        sha256: 4e3f8767608e55cf7742356f03d70eaad0e06249c3c328ee8b7198f47f06d3f6
+          https://github.com/P1sec/DiagNG/releases/download/0.1.7/diagmond_tarball_0.1.7_for_flathub_build.tar.gz
+        sha256: 38835212fb4b6362f52e42df7b49f4d236f834df81d908275ebb1ddc26ff9b1d
         x-checker-data:
           type: json
           url: https://api.github.com/repos/P1sec/DiagNG/releases/latest
@@ -119,8 +119,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/P1sec/DiagNG
-        tag: 0.1.6
-        commit: fe8336f100bc85e26ae0ef14371dbd8454e7b8cf
+        tag: 0.1.7
+        commit: 520e4b592b171013d1f564b58393b685756c3a6c
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
